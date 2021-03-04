@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    public List<Enemy> ememies;
+    public int speed;
+    public int enemyCount;
+    public float direction;
+    
+    public GameObject enemy01;
+    public GameObject enemy02;
+    public GameObject enemy03;
+    public GameObject enemy04;
+    
     // Start is called before the first frame update
     void Start()
     {
