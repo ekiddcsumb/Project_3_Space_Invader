@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public List<Enemy> ememies;
-    public int speed;
-    public int enemyCount;
-    public float direction;
+    [SerializeField] private List<Enemy> ememies;
+    [SerializeField] private int speed;
+    [SerializeField] private int enemyCount;
+    [SerializeField] private float direction;
     
     public GameObject enemy01;
     public GameObject enemy02;
@@ -23,6 +23,6 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Update");
+        
     }
 }

@@ -6,12 +6,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
   public GameObject bullet;
-  public GameObject player;
+
+  public float speedModifier = 1;
 
   public Transform shootingOffset;
     // Update is called once per frame
   void Update()
   {
+    float horizontal = Input.GetAxis("Horizontal");
+    transform.Translate(transform.right * horizontal * speedModifier * Time.deltaTime);
+    
     if (Input.GetKeyDown(KeyCode.Space))
     {
       GameObject shot = Instantiate(bullet, shootingOffset.position, Quaternion.identity);
@@ -24,7 +28,7 @@ public class Player : MonoBehaviour
 
   private void OnCollisionEnter(Collision other)
   {
-    Destroy(bullet);
-    Destroy(player);
+    Destroy(other.gameObject);
+    Destroy(gameObject);
   }
 }
