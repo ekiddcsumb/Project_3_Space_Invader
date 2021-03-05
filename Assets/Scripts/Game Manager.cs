@@ -8,6 +8,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int playerLives;
     private void Reset()
     {
-        throw new NotImplementedException();
+        Debug.Log("Reset");
     }
 }
