@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6011114600073049387}
   - component: {fileID: 2196580065428638805}
   - component: {fileID: 8490837164734827798}
-  - component: {fileID: 8755032237775147694}
   - component: {fileID: 8699066766321415646}
   m_Layer: 0
   m_Name: Enemy02
@@ -97,19 +96,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8755032237775147694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3112976795971216905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796aad014e2107342a60ed88af81c745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: 0
 --- !u!114 &8699066766321415646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +109,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
+  bullet: {fileID: 2457785739244962049, guid: d4511b14daaa37c468a74ed386b2583f, type: 3}
+  _scoreManager: {fileID: 0}

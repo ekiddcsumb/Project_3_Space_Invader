@@ -1,10 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     public int points;
+
+    public GameObject bullet;
+    
+    public Transform shootingOffset;
+
+    public EnemyManager manager;
 
     public ScoreManager _scoreManager;
     // Start is called before the first frame update
@@ -16,5 +23,10 @@ public class Enemy : MonoBehaviour
       
       Destroy(collision.gameObject);
       Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        manager.Shoot(bullet, shootingOffset);
     }
 }
