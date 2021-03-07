@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private List<Enemy> enemies;
-    [SerializeField] private int speed;
+    public int speed;
     public int enemyCount = 0;
     [SerializeField] private float up;
     [SerializeField] private float down;
