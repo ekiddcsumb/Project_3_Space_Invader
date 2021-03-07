@@ -27,6 +27,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        manager.Shoot(bullet, shootingOffset);
+        // manager.Shoot(bullet, shootingOffset);
     }
 }
