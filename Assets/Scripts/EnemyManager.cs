@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -8,9 +9,8 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private List<Enemy> enemies;
     public int speed;
     public int enemyCount = 0;
-    [SerializeField] private float up;
-    [SerializeField] private float down;
-    
+    [SerializeField] private float direction;
+
     public Enemy enemy01;
     public Enemy enemy02;
     public Enemy enemy03;
@@ -26,6 +26,11 @@ public class EnemyManager : MonoBehaviour
     {
         
         
+    }
+
+    private void Update()
+    {
+        MoveEnemies();
     }
 
     public void Shoot(GameObject bullet, Transform shootingOffset)
@@ -58,6 +63,32 @@ public class EnemyManager : MonoBehaviour
             enemies.Add(Instantiate(enemy04, new Vector3(x, 1, 0), Quaternion.identity));
             enemyCount++;
             Debug.Log("Enemies: " + enemies);
+        }
+    }
+
+    void MoveEnemies()
+    {
+        // Based on current direction, iterate through enemy
+        // list and move until max or min approaches certain
+        // coordinate in game space.
+        // Once min/max hits that point, go down, then opposite direction.
+        // For max, must hit x = 5. x= -5 for min.
+
+        foreach (var enemy in enemies)
+        {
+            enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
+
+            // if (enemies.Min().transform.position.x.Equals(-5.0))
+            // {
+            //     enemy.transform.Translate(Vector3.down * Time.deltaTime * speed);
+            //     enemy.transform.Translate(Vector3.right * Time.deltaTime * speed);
+            // }
+            //
+            // if (enemies.Max().transform.position.x.Equals(5.0))
+            // {
+            //     enemy.transform.Translate(Vector3.down * Time.deltaTime * speed);
+            //     enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
+            // }
         }
     }
 }
