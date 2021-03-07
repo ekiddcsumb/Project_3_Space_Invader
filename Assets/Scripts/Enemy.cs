@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour,  IComparable
 {
     public int points;
 
@@ -31,5 +31,10 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         // manager.Shoot(bullet, shootingOffset);
+    }
+
+    public int CompareTo(object obj)
+    {
+        return 0;
     }
 }
