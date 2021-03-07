@@ -7,38 +7,25 @@ public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private List<Enemy> enemies;
     [SerializeField] private int speed;
-    [SerializeField] private int enemyCount = 4;
-    [SerializeField] private float direction;
+    public int enemyCount = 0;
+    [SerializeField] private float up;
+    [SerializeField] private float down;
     
     public Enemy enemy01;
     public Enemy enemy02;
     public Enemy enemy03;
     public Enemy enemy04;
-
-    public Transform parentTransform;
-
+    
 
     private void Awake()
     {
-        enemies = new List<Enemy>();
-        
-        for (int i = 0; i < enemyCount; i++)
-        {
-            enemies.Add(enemy01);
-            enemies.Add(enemy02);
-            enemies.Add(enemy03);
-            enemies.Add(enemy04);
-            Debug.Log("Enemies: " + enemies);
-        }
-
-        // enemyCount = enemies.Count;
-        // Debug.Log("Enemies: " + enemies);
+        InstantiateEnemies();
     }
 
     private void Start()
     {
-        InstantiateEnemies();
-        Debug.Log("Enemies: " + enemies);
+        
+        
     }
 
     public void Shoot(GameObject bullet, Transform shootingOffset)
@@ -57,22 +44,20 @@ public class EnemyManager : MonoBehaviour
 
     void InstantiateEnemies()
     {
-        Instantiate(enemy01, Vector3.zero, Quaternion.identity);
+        // Instantiate(enemy01, Vector3.zero, Quaternion.identity);
 
-        for (int x = 0; x < enemyCount; x++)
+        for (int x = -4; x < 6; x += 2)
         {
-            Instantiate(enemy01, new Vector3(x, 0, 0), Quaternion.identity);
+            // Instantiate(enemy01, new Vector3(x, 4, 0), Quaternion.identity);
+            enemies.Add(Instantiate(enemy01, new Vector3(x, 4, 0), Quaternion.identity));
+            enemyCount++;
+            enemies.Add(Instantiate(enemy02, new Vector3(x, 3, 0), Quaternion.identity));
+            enemyCount++;
+            enemies.Add(Instantiate(enemy03, new Vector3(x, 2, 0), Quaternion.identity));
+            enemyCount++;
+            enemies.Add(Instantiate(enemy04, new Vector3(x, 1, 0), Quaternion.identity));
+            enemyCount++;
+            Debug.Log("Enemies: " + enemies);
         }
-        // Enemy toSpawn;
-        // Vector3 positionToSpawn = Vector3.zero;
-        //
-        //
-        // foreach (var enemy in enemies)
-        // {
-        //     Debug.Log("Enemies: " + enemies);
-        //     toSpawn = Instantiate(enemy, parentTransform);
-        //     toSpawn.transform.localPosition = positionToSpawn;
-        //     positionToSpawn.x += 2;
-        // }
     }
 }

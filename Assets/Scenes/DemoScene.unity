@@ -12999,12 +12999,12 @@ MonoBehaviour:
   enemies: []
   speed: 0
   enemyCount: 0
-  direction: 0
+  up: 0
+  down: 0
   enemy01: {fileID: 130520259}
   enemy02: {fileID: 130520259}
   enemy03: {fileID: 130520259}
   enemy04: {fileID: 130520259}
-  parentTransform: {fileID: 1385588017}
 --- !u!4 &1385588017
 Transform:
   m_ObjectHideFlags: 0
@@ -18006,12 +18006,24 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3995583674276244374, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.64376986
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995583674276244374, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.64376986
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995583674276244374, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.64376986
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995583674276244374, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.09
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3995583674276244374, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.88
+      value: 6.49
       objectReference: {fileID: 0}
     - target: {fileID: 3995583674276244374, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
       propertyPath: m_LocalPosition.z
