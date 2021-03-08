@@ -50,7 +50,7 @@ public class EnemyManager : MonoBehaviour
             }
         }
 
-        float randTime = Random.Range(10, 50);
+        float randTime = Random.Range(10, 100);
         Invoke(nameof(Shoot), randTime);
         MoveEnemies();
     }
