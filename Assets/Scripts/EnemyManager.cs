@@ -77,21 +77,30 @@ public class EnemyManager : MonoBehaviour
         foreach (var enemy in enemies)
         {
             // var position = enemy.transform.position;
-            Vector3 minPosition = new Vector3(-5, enemies.Min().transform.position.y, 0);
-            Vector3 maxPosition = new Vector3(5, enemies.Max().transform.position.y, 0);
             
-            enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
+            if (!enemy.Equals(null))
+            {
+                Vector3 minPosition = new Vector3(-5, enemy.transform.position.y, 0);
+                Vector3 maxPosition = new Vector3(5, enemy.transform.position.y, 0);
+                
+                // enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
 
-            if (enemy.transform.position.Equals(minPosition))
-            {
-                enemy.transform.Translate(Vector3.down * Time.deltaTime * speed);
-                enemy.transform.Translate(Vector3.right * Time.deltaTime * speed);
-            }
-            
-            if (enemy.transform.position.Equals(maxPosition))
-            {
-                enemy.transform.Translate(Vector3.down * Time.deltaTime * speed);
-                enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
+                if (!enemy.transform.position.Equals(minPosition))
+                {
+                    enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, minPosition, Time.deltaTime * speed);
+                    
+                    // enemy.transform.Translate(Vector3.right * Time.deltaTime * speed);
+                }
+                else
+                {
+                    enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, maxPosition, Time.deltaTime * speed);
+                }
+                
+                // if (transform.position.Equals(maxPosition))
+                // {
+                //     enemy.transform.Translate(Vector3.down * Time.deltaTime * speed);
+                //     enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
+                // }
             }
         }
     }
