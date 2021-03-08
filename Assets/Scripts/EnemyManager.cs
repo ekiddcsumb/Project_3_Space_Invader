@@ -21,6 +21,8 @@ public class EnemyManager : MonoBehaviour
     static int maxX = 5;
 
     int xDirection = minX;
+    
+    private bool down;
 
     private void Awake()
     {
@@ -33,7 +35,8 @@ public class EnemyManager : MonoBehaviour
         {
             direction = new Vector3(-5, enemy.transform.position.y, 0);
         }
-        
+
+        down = false;
     }
 
     private void Update()
@@ -91,39 +94,37 @@ public class EnemyManager : MonoBehaviour
         
         foreach (var enemy in enemies)
         {
-            // var position = enemy.transform.position;
-            
             if (!enemy.Equals(null))
             {
                 Vector3 minPosition = new Vector3(minX, enemy.transform.position.y, 0);
                 Vector3 maxPosition = new Vector3(maxX, enemy.transform.position.y, 0);
-                
-                // enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
 
                 if (enemy.transform.position.Equals(minPosition))
                 {
-                    // direction = new Vector3(enemy.transform.position.x - 5, enemy.transform.position.y, 0);
                     xDirection = maxX;
-                    // enemy.transform.Translate(Vector3.right * Time.deltaTime * speed);
+                    // enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y - .1f, 0);
+                    down = true;
                 }
 
                 if (enemy.transform.position.Equals(maxPosition))
                 {
-                    // direction = new Vector3(enemy.transform.position.x + 5, enemy.transform.position.y, 0);
                     xDirection = minX;
-                    // enemy.transform.position = Vector3.MoveTowards(enemy.transform.position,
-                    //  maxPosition, Time.deltaTime * speed);
+                    // enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y - .1f, 0);
+                    down = true;
                 }
                 
                 enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, 
                     new Vector3(xDirection, enemy.transform.position.y, 0), Time.deltaTime * speed);
-                
-                // if (transform.position.Equals(maxPosition))
-                // {
-                //     enemy.transform.Translate(Vector3.down * Time.deltaTime * speed);
-                //     enemy.transform.Translate(Vector3.left * Time.deltaTime * speed);
-                // }
             }
+        }
+
+        if (down)
+        {
+            foreach (var enemy in enemies)
+            {
+                enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y - .1f, 0);
+            }
+            down = false;
         }
     }
 }
