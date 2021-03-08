@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour,  IComparable
           Destroy(collision.gameObject);
           Destroy(gameObject);
 
-          manager.speed += .1f;
+          manager.speed += .2f;
           manager.enemyCount--;
       }
     }
