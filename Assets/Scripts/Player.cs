@@ -25,10 +25,10 @@ public class Player : MonoBehaviour
 
     }
   }
-
-  private void OnCollisionEnter(Collision other)
+  
+  private void OnCollisionEnter2D(Collision2D collision2D)
   {
-    Destroy(other.gameObject);
+    Destroy(collision2D.gameObject);
     Destroy(gameObject);
   }
 }
