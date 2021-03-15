@@ -130,9 +130,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2077265447342935877, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077265447342935877, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077265447342935877, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077265447342935877, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077265447342935877, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077265447342935877, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077265447342935877, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3876148996625569095, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876148996625569095, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1121124
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876148996625569095, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1121124
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876148996625569095, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1121124
       objectReference: {fileID: 0}
     - target: {fileID: 3876148996625569095, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -178,8 +218,85 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy02
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8092888411774057022, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+    - {fileID: 956163907702531648, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+--- !u!1 &64631857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5647178014408988862, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
+  m_PrefabInstance: {fileID: 21829884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &64631859
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64631857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc34c74325166b845b5b72595d040bdc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &64631860
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64631857}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.78, y: 0.75}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &90380840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -613,7 +730,7 @@ SpriteRenderer:
   m_Size: {x: 0.78, y: 0.78}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &470988815
@@ -1015,7 +1132,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1130391477799733276, guid: 16bcdf8a6d1e5794c897c56e9d33a9fb, type: 3}
   m_PrefabInstance: {fileID: 21829884}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 64631857}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 796aad014e2107342a60ed88af81c745, type: 3}
