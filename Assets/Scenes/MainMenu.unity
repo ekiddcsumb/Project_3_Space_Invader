@@ -188,7 +188,7 @@ MonoBehaviour:
     m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0, g: 1, b: 0.02745098, a: 1}
     m_DisabledColor: {r: 0.6868548, g: 0.990566, b: 0.6951919, a: 1}
-    m_ColorMultiplier: 5
+    m_ColorMultiplier: 1
     m_FadeDuration: 0.84
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1926873032}
+      - m_Target: {fileID: 7705537911546758959, guid: 5355a728a98f3eb4a9ccfed791db573e, type: 3}
         m_TargetAssemblyTypeName: StartScript, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1

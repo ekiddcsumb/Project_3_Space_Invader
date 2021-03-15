@@ -10,4 +10,9 @@ public class StartScript : MonoBehaviour
         Debug.Log("Start button pressed.");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void EndCredits()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
