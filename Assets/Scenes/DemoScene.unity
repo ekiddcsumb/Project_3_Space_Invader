@@ -1287,7 +1287,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.25}
+  m_Size: {x: 1.36, y: 1.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1646,6 +1646,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b843f00a535c06b4588538d7308ffc1b, type: 2}
+    - target: {fileID: 1991442555005730519, guid: 46f7c04cfd4b73e49a865596061b9ab8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1543867848}
     - target: {fileID: 3791936555625136708, guid: 46f7c04cfd4b73e49a865596061b9ab8, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5

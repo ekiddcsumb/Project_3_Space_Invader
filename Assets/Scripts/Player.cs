@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
   public float speedModifier = 1;
 
   public Transform shootingOffset;
+
+  public Animator animator;
     // Update is called once per frame
   void Update()
   {
@@ -18,11 +20,16 @@ public class Player : MonoBehaviour
     
     if (Input.GetKeyDown(KeyCode.Space))
     {
+      animator.SetBool("Shooting", true);
       GameObject shot = Instantiate(bullet, shootingOffset.position, Quaternion.identity);
       Debug.Log("Bang!");
 
       Destroy(shot, 3f);
 
+    }
+    else
+    {
+      animator.SetBool("Shooting", false);
     }
   }
   
