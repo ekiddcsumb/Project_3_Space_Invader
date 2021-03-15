@@ -17,6 +17,8 @@ public class EnemyManager : MonoBehaviour
     public Enemy enemy03;
     public Enemy enemy04;
 
+    private Animator animator;
+
     static int minX = -5;
     static int maxX = 5;
 
@@ -48,6 +50,7 @@ public class EnemyManager : MonoBehaviour
             {
                 enemies.Remove(enemy);
             }
+            enemy.animator.SetBool("isShooting", false);
         }
 
         float randTime = Random.Range(10, 100);
@@ -59,8 +62,9 @@ public class EnemyManager : MonoBehaviour
     {
         // Use random to randomly select an enemy from the 
         // enemy list and make it shoot.
-
+        
         int randEnemy = Random.Range(0, enemies.Count);
+        enemies[randEnemy].animator.SetBool("isShooting", true);
         GameObject shot = Instantiate(enemies[randEnemy].bullet, enemies[randEnemy].shootingOffset.position, Quaternion.identity);
         Destroy(shot, 3f);
     }

@@ -14,13 +14,14 @@ public class Enemy : MonoBehaviour,  IComparable
     public EnemyManager manager;
 
     public ScoreManager _scoreManager;
+
+    public Animator animator;
     
     void OnCollisionEnter2D(Collision2D collision)
     {
-      Debug.Log("Ouch!");
-
-      if (collision.gameObject.name != "EnemyBullet(Clone)")
+        if (collision.gameObject.name != "EnemyBullet(Clone)")
       {
+          animator.SetBool("isDead", true);
           _scoreManager.AddScore(gameObject.GetComponent<Enemy>().points);
       
           Destroy(collision.gameObject);

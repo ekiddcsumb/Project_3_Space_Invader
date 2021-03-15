@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     {
       animator.SetBool("Shooting", true);
       GameObject shot = Instantiate(bullet, shootingOffset.position, Quaternion.identity);
-      Debug.Log("Bang!");
 
       Destroy(shot, 3f);
 
@@ -35,7 +34,7 @@ public class Player : MonoBehaviour
   
   private void OnCollisionEnter2D(Collision2D collision2D)
   {
-    animator.SetBool("isDead", true);
+    
     Destroy(collision2D.gameObject);
     Destroy(gameObject);
   }

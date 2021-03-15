@@ -18,7 +18,6 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     private void Fire()
     {
-        myRigidbody2D.velocity = Vector2.down * speed; 
-        Debug.Log("Wwweeeeee");
+        myRigidbody2D.velocity = Vector2.down * speed;
     }
 }

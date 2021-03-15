@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4756012316317727319
+--- !u!1 &6050810371054550839
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4756012316317727317}
-  - component: {fileID: 4756012316317727318}
+  - component: {fileID: 6050810371054550837}
+  - component: {fileID: 6050810371054550838}
+  - component: {fileID: 7705537911546758959}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: Game Manager 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4756012316317727317
+--- !u!4 &6050810371054550837
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4756012316317727319}
+  m_GameObject: {fileID: 6050810371054550839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.15966952, y: 0.018863399, z: -0.37725526}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,16 +32,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4756012316317727318
+--- !u!114 &6050810371054550838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4756012316317727319}
+  m_GameObject: {fileID: 6050810371054550839}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcda1c06fd71af94b81d2407dd869eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: 3
+--- !u!114 &7705537911546758959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050810371054550839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8234e436ccb2a1740bc909a5a6680d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

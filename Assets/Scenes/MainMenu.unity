@@ -188,8 +188,8 @@ MonoBehaviour:
     m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0, g: 1, b: 0.02745098, a: 1}
     m_DisabledColor: {r: 0.6868548, g: 0.990566, b: 0.6951919, a: 1}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_ColorMultiplier: 5
+    m_FadeDuration: 0.84
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7705537911546758959, guid: 5355a728a98f3eb4a9ccfed791db573e, type: 3}
+      - m_Target: {fileID: 1926873032}
         m_TargetAssemblyTypeName: StartScript, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
@@ -1257,6 +1257,7 @@ GameObject:
   - component: {fileID: 1926873030}
   - component: {fileID: 1926873029}
   - component: {fileID: 1926873028}
+  - component: {fileID: 1926873032}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1350,6 +1351,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1926873032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926873027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8234e436ccb2a1740bc909a5a6680d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2060140488
 GameObject:
   m_ObjectHideFlags: 0
