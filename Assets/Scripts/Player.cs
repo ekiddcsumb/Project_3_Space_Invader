@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
   
   private void OnCollisionEnter2D(Collision2D collision2D)
   {
+    animator.SetBool("isDead", true);
     Destroy(collision2D.gameObject);
     Destroy(gameObject);
   }
